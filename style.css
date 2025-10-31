@@ -1,104 +1,196 @@
-body {
+* {
   margin: 0;
-  font-family: 'Segoe UI', sans-serif;
-  background: #ffffff;
-  color: #272727;
-}
-
-header {
-  background: #1f1c1c;
-  color: #fff;
-  text-align: center;
-  padding: 20px 10px;
-}
-
-nav ul {
-  list-style: none;
   padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
 }
 
-nav ul li {
-  display: inline-block;
-  margin: 0 90px;
+/* ===== ESTILO GERAL ===== */
+body {
+  background-color: #f3f4f6;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* ===== CABEÇALHO ===== */
+header {
+  background: linear-gradient(90deg, #2563eb, #1e40af);
+  color: white;
+  padding: 20px 0;
+  text-align: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+header h1 {
+  font-size: 2em;
+  margin-bottom: 10px;
 }
 
 nav a {
-  color: rgb(255, 255, 255);
-  text-decoration: none;
-  font-weight: bold;
-  transition: 0.3s;
-}
-
-nav a:hover, .ativo {
-  color: #00bcd4;
-}
-
-main {
-  padding: 40px;
-}
-
-section {
-  margin-bottom: 70px;
-}
-
-.cards {
-  display: flex;
-  gap: 20px;
-  flex-wrap: wrap;
-}
-
-.card {
-  background: white;
-  border-radius: 30px;
-  padding: 20px;
-  box-shadow: 0 0 10px rgba(0,0,0,0.1);
-  flex: 1;
-  min-width: 50px;
-  transition: transform 0.2s;
-}
-
-.card:hover {
-  transform: scale(1.05);
-}
-
-img {
-  max-width: 100%;
-  border-radius: 10px;
-  margin-top: 10px;
-}
-
-button {
-  background: #00bcd4;
   color: white;
-  border: none;
-  padding: 10px 20px;
-  border-radius: 8px;
-  cursor: pointer;
-  transition: 0.2s;
+  margin: 0 15px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.3s;
 }
 
-button:hover {
-  background: #1c8b9c;
+nav a:hover {
+  color: #ffd700;
 }
 
-footer {
+nav a.active {
+  color: #ffd700;
+}
+
+/* ===== (INÍCIO) ===== */
+#hero {
+  background: linear-gradient(135deg, #2563eb, #1e40af);
+  color: white;
   text-align: center;
-  background: #242222;
-  color: #fff;
-  padding: 15px;
-  position: relative;
+  padding: 100px 20px;
+  border-radius: 5px; /*bordas*/
+  margin: 10px auto;
+  width: 100%;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
 }
 
+#hero h2 {
+  font-size: 2.5em;
+  margin-bottom: 15px;
+  color: white;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+#hero p {
+  font-size: 1.1em;
+  color: #f1f1f1;
+}
+
+/* ===== MAIN ===== */
+main {
+  padding: 40px 20px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+/* ===== TÍTULOS GERAIS ===== */
+main h2 {
+  text-align: center;
+  margin-bottom: 25px;
+  font-size: 2.2em;
+  color: #1e3a8a;
+  font-weight: 800;
+  letter-spacing: 1px;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.15);
+}
+
+/* ===== NOTÍCIAS ===== */
+body.noticias-page {
+  background: linear-gradient(180deg, #f3f4f6 0%, #e2e8f0 100%);
+}
+
+.noticias-titulo {
+  text-align: center;
+  font-size: 2.6em;
+  font-weight: 900;
+  color: #1e3a8a;
+  margin: 40px auto 50px auto;
+  letter-spacing: 1px;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.15);
+  background: linear-gradient(90deg, #2563eb, #1e40af);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* ===== CONTAINER PRINCIPAL ===== */
+main {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 40px 20px 60px 20px;
+}
+
+/* ===== ARTIGOS DE NOTÍCIA ===== */
+article {
+  background: #ffffff;
+  padding: 25px 30px;
+  margin: 25px auto;
+  border-radius: 15px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+article:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+/* ===== TÍTULO DAS NOTÍCIAS ===== */
+article h3 {
+  font-size: 1.4em;
+  color: #1e40af;
+  margin-bottom: 10px;
+}
+
+article h3::before {
+  content: "💡 ";
+}
+
+/* ===== TEXTO DAS NOTÍCIAS ===== */
+article p {
+  color: #333;
+  line-height: 1.6;
+}
+
+/* ===== FORMULÁRIO DE CONTATO ===== */
 form {
   display: flex;
   flex-direction: column;
-  gap: 10px;
-  max-width: 400px;
+  gap: 15px;
+  max-width: 600px;
   margin: 0 auto;
+}
+
+label {
+  font-weight: bold;
 }
 
 input, textarea {
   padding: 10px;
   border-radius: 6px;
   border: 1px solid #ccc;
+  font-size: 1em;
+}
+
+/* ===== BOTÃO PADRÃO ===== */
+button, #voltarTopo {
+  background: #2563eb;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 10px 20px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+button:hover, #voltarTopo:hover {
+  background: #1e40af;
+  transform: scale(1.05);
+}
+
+/* ===== RODAPÉ ===== */
+footer {
+  background: linear-gradient(90deg, #1e40af, #2563eb);
+  color: white;
+  text-align: center;
+  padding: 20px;
+  margin-top: 40px;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  box-shadow: 0 -3px 10px rgba(0, 0, 0, 0.15);
+}
+
+footer p {
+  margin-bottom: 10px;
+  font-size: 0.95em;
 }
