@@ -12,7 +12,7 @@ body {
     line-height: 1.6;
 }
 
-/* ===== CABEÇALHO (Correção 1: Navegação em uma linha) ===== */
+/* ===== CABEÇALHO ===== */
 header {
     background: linear-gradient(90deg, #2563eb, #1e40af);
     color: white;
@@ -26,11 +26,10 @@ header h1 {
     margin-bottom: 10px;
 }
 
-/* Regras para colocar os itens (li) lado a lado e centralizar */
 header nav ul {
-    list-style: none; /* Remove as bolinhas */
-    display: flex; /* Habilita o layout flexível */
-    justify-content: center; /* Centraliza os itens na linha */
+    list-style: none;
+    display: flex; 
+    justify-content: center; 
     padding: 10px 0 0 0;
     margin: 0;
 }
@@ -51,18 +50,17 @@ nav a.active {
     color: #ffd700;
 }
 
-/* ===== ESTILO REUTILIZÁVEL DE CARD (Correção 2: Para replicar o estilo) ===== */
-/* Esta classe será aplicada às seções #sobre, artigos e .card */
+/* ===== ESTILO ===== */
+
 .card-style {
     background: #ffffff;
     padding: 25px 30px;
     margin: 25px auto;
     border-radius: 15px;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Adicionando a transição aqui */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-/* Efeito Hover para todos os elementos que usam o estilo de card */
 .card-style:hover {
     transform: translateY(-5px);
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
@@ -125,7 +123,7 @@ body.noticias-page {
     text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.15);
     background: linear-gradient(90deg, #2563eb, #1e40af);
     -webkit-background-clip: text;
-    background-clip: text; /* Correção do aviso que você tinha */
+    background-clip: text;
     -webkit-text-fill-color: transparent;
 }
 
@@ -136,14 +134,12 @@ main {
     padding: 40px 20px 60px 20px;
 }
 
-/* ===== ARTIGOS DE NOTÍCIA (Reutilizando o .card-style) ===== */
+/* ===== ARTIGOS DE NOTÍCIA ===== */
 article {
-    /* Mantém o estilo base do card-style, só precisa da transição */
     transition: transform 0.3s ease, box-shadow 0.3s ease; 
 }
-/* Reaplicando o .card-style ao article */
+
 article, article:hover {
-    /* Herda o estilo visual de .card-style */
     background: #ffffff;
     padding: 25px 30px;
     margin: 25px auto;
@@ -173,7 +169,7 @@ article p {
     line-height: 1.6;
 }
 
-/* ===== TÓPICOS POPULARES (Adicionando Flexbox para 3 cards por linha) ===== */
+/* ===== TÓPICOS POPULARES ===== */
 .cards {
     display: flex;
     gap: 20px;
@@ -182,13 +178,12 @@ article p {
 }
 
 .cards .card {
-    /* Aplica o estilo de card aos tópicos populares */
     background: #ffffff;
     padding: 20px;
     border-radius: 15px;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease, box-shadow 0.3s ease; 
-    flex: 1 1 30%; /* Faz com que os cards ocupem cerca de 30% da largura (3 por linha) */
+    flex: 1 1 30%; 
     min-width: 250px;
     text-align: center;
 }
