@@ -99,6 +99,7 @@ body.noticias-page {
   text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.15);
   background: linear-gradient(90deg, #2563eb, #1e40af);
   -webkit-background-clip: text;
+  background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
