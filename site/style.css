@@ -1,197 +1,257 @@
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: "Poppins", sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
 }
 
 /* ===== ESTILO GERAL ===== */
 body {
-  background-color: #f3f4f6;
-  color: #333;
-  line-height: 1.6;
+    background-color: #f3f4f6;
+    color: #333;
+    line-height: 1.6;
 }
 
-/* ===== CABEÇALHO ===== */
+/* ===== CABEÇALHO (Correção 1: Navegação em uma linha) ===== */
 header {
-  background: linear-gradient(90deg, #2563eb, #1e40af);
-  color: white;
-  padding: 20px 0;
-  text-align: center;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    background: linear-gradient(90deg, #2563eb, #1e40af);
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
 header h1 {
-  font-size: 2em;
-  margin-bottom: 10px;
+    font-size: 2em;
+    margin-bottom: 10px;
+}
+
+/* Regras para colocar os itens (li) lado a lado e centralizar */
+header nav ul {
+    list-style: none; /* Remove as bolinhas */
+    display: flex; /* Habilita o layout flexível */
+    justify-content: center; /* Centraliza os itens na linha */
+    padding: 10px 0 0 0;
+    margin: 0;
 }
 
 nav a {
-  color: white;
-  margin: 0 15px;
-  text-decoration: none;
-  font-weight: 600;
-  transition: color 0.3s;
+    color: white;
+    margin: 0 15px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s;
 }
 
 nav a:hover {
-  color: #ffd700;
+    color: #ffd700;
 }
 
 nav a.active {
-  color: #ffd700;
+    color: #ffd700;
+}
+
+/* ===== ESTILO REUTILIZÁVEL DE CARD (Correção 2: Para replicar o estilo) ===== */
+/* Esta classe será aplicada às seções #sobre, artigos e .card */
+.card-style {
+    background: #ffffff;
+    padding: 25px 30px;
+    margin: 25px auto;
+    border-radius: 15px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Adicionando a transição aqui */
+}
+
+/* Efeito Hover para todos os elementos que usam o estilo de card */
+.card-style:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
 }
 
 /* ===== (INÍCIO) ===== */
 #hero {
-  background: linear-gradient(135deg, #2563eb, #1e40af);
-  color: white;
-  text-align: center;
-  padding: 100px 20px;
-  border-radius: 5px; /*bordas*/
-  margin: 10px auto;
-  width: 100%;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    background: linear-gradient(135deg, #2563eb, #1e40af);
+    color: white;
+    text-align: center;
+    padding: 100px 20px;
+    border-radius: 5px;
+    margin: 10px auto;
+    width: 100%;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
 }
 
 #hero h2 {
-  font-size: 2.5em;
-  margin-bottom: 15px;
-  color: white;
-  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+    font-size: 2.5em;
+    margin-bottom: 15px;
+    color: white;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
 }
 
 #hero p {
-  font-size: 1.1em;
-  color: #f1f1f1;
+    font-size: 1.1em;
+    color: #f1f1f1;
 }
 
 /* ===== MAIN ===== */
 main {
-  padding: 40px 20px;
-  max-width: 1000px;
-  margin: 0 auto;
+    padding: 40px 20px;
+    max-width: 1000px;
+    margin: 0 auto;
 }
 
 /* ===== TÍTULOS GERAIS ===== */
 main h2 {
-  text-align: center;
-  margin-bottom: 25px;
-  font-size: 2.2em;
-  color: #1e3a8a;
-  font-weight: 800;
-  letter-spacing: 1px;
-  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.15);
+    text-align: center;
+    margin-bottom: 25px;
+    font-size: 2.2em;
+    color: #1e3a8a;
+    font-weight: 800;
+    letter-spacing: 1px;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.15);
 }
 
 /* ===== NOTÍCIAS ===== */
 body.noticias-page {
-  background: linear-gradient(180deg, #f3f4f6 0%, #e2e8f0 100%);
+    background: linear-gradient(180deg, #f3f4f6 0%, #e2e8f0 100%);
 }
 
 .noticias-titulo {
-  text-align: center;
-  font-size: 2.6em;
-  font-weight: 900;
-  color: #1e3a8a;
-  margin: 40px auto 50px auto;
-  letter-spacing: 1px;
-  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.15);
-  background: linear-gradient(90deg, #2563eb, #1e40af);
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
+    text-align: center;
+    font-size: 2.6em;
+    font-weight: 900;
+    color: #1e3a8a;
+    margin: 40px auto 50px auto;
+    letter-spacing: 1px;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.15);
+    background: linear-gradient(90deg, #2563eb, #1e40af);
+    -webkit-background-clip: text;
+    background-clip: text; /* Correção do aviso que você tinha */
+    -webkit-text-fill-color: transparent;
 }
 
 /* ===== CONTAINER PRINCIPAL ===== */
 main {
-  max-width: 900px;
-  margin: 0 auto;
-  padding: 40px 20px 60px 20px;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 40px 20px 60px 20px;
 }
 
-/* ===== ARTIGOS DE NOTÍCIA ===== */
+/* ===== ARTIGOS DE NOTÍCIA (Reutilizando o .card-style) ===== */
 article {
-  background: #ffffff;
-  padding: 25px 30px;
-  margin: 25px auto;
-  border-radius: 15px;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+    /* Mantém o estilo base do card-style, só precisa da transição */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; 
+}
+/* Reaplicando o .card-style ao article */
+article, article:hover {
+    /* Herda o estilo visual de .card-style */
+    background: #ffffff;
+    padding: 25px 30px;
+    margin: 25px auto;
+    border-radius: 15px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
 }
 
 article:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
 }
 
 /* ===== TÍTULO DAS NOTÍCIAS ===== */
 article h3 {
-  font-size: 1.4em;
-  color: #1e40af;
-  margin-bottom: 10px;
+    font-size: 1.4em;
+    color: #1e40af;
+    margin-bottom: 10px;
 }
 
 article h3::before {
-  content: "💡 ";
+    content: "💡 ";
 }
 
 /* ===== TEXTO DAS NOTÍCIAS ===== */
 article p {
-  color: #333;
-  line-height: 1.6;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* ===== TÓPICOS POPULARES (Adicionando Flexbox para 3 cards por linha) ===== */
+.cards {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap; 
+    justify-content: center;
+}
+
+.cards .card {
+    /* Aplica o estilo de card aos tópicos populares */
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease; 
+    flex: 1 1 30%; /* Faz com que os cards ocupem cerca de 30% da largura (3 por linha) */
+    min-width: 250px;
+    text-align: center;
+}
+
+.cards .card h3 {
+    color: #1e40af;
+}
+
+.cards .card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
 }
 
 /* ===== FORMULÁRIO DE CONTATO ===== */
 form {
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
-  max-width: 600px;
-  margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    max-width: 600px;
+    margin: 0 auto;
 }
 
 label {
-  font-weight: bold;
+    font-weight: bold;
 }
 
 input, textarea {
-  padding: 10px;
-  border-radius: 6px;
-  border: 1px solid #ccc;
-  font-size: 1em;
+    padding: 10px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    font-size: 1em;
 }
 
 /* ===== BOTÃO PADRÃO ===== */
 button, #voltarTopo {
-  background: #2563eb;
-  color: white;
-  border: none;
-  border-radius: 8px;
-  padding: 10px 20px;
-  font-weight: 600;
-  cursor: pointer;
-  transition: background 0.3s ease, transform 0.2s ease;
+    background: #2563eb;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    padding: 10px 20px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.2s ease;
 }
 
 button:hover, #voltarTopo:hover {
-  background: #1e40af;
-  transform: scale(1.05);
+    background: #1e40af;
+    transform: scale(1.05);
 }
 
 /* ===== RODAPÉ ===== */
 footer {
-  background: linear-gradient(90deg, #1e40af, #2563eb);
-  color: white;
-  text-align: center;
-  padding: 20px;
-  margin-top: 40px;
-  border-top-left-radius: 5px;
-  border-top-right-radius: 5px;
-  box-shadow: 0 -3px 10px rgba(0, 0, 0, 0.15);
+    background: linear-gradient(90deg, #1e40af, #2563eb);
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    box-shadow: 0 -3px 10px rgba(0, 0, 0, 0.15);
 }
 
 footer p {
-  margin-bottom: 10px;
-  font-size: 0.95em;
+    margin-bottom: 10px;
+    font-size: 0.95em;
 }
