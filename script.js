@@ -10,7 +10,7 @@ function scrollToSection(id) {
   document.getElementById(id).scrollIntoView({ behavior: "smooth" });
 }
 
-// Interatividade no formulário
+// Interatividade no site
 const form = document.getElementById("formContato");
 if (form) {
   form.addEventListener("submit", (e) => {
