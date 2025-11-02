@@ -6,15 +6,17 @@
   <title>TechNova – O Futuro em Suas Mãos</title>
   <link rel="stylesheet" href="style.css">
   <script src="script.js" defer></script>
+  <link rel="shortcut icon" href="imagem_aba.png" type="imagem_aba">
 </head>
 <body>
   <header>
     <h1>TechNova</h1>
     <nav>
       <ul>
-        <li><a href="index.html">Início</a></li>
+        <li><a href="index.html" class="active">Início</a></li>
         <li><a href="noticias.html">Notícias</a></li>
         <li><a href="contato.html">Contato</a></li>
+        <li><a href="sobre.html">Sobre</a></li>
       </ul>
     </nav>
   </header>
@@ -26,28 +28,31 @@
       <button onclick="scrollToSection('sobre')">Saiba Mais</button>
     </section>
 
-    <section id="sobre">
-      <h2>Sobre o TechNova</h2>
-      <p>O <strong>TechNova</strong> é um portal criado para trazer informações e novidades sobre o mundo tecnológico. Nosso objetivo é mostrar como a tecnologia está transformando o mundo.</p>
-    </section>
-
     <section id="temas">
       <h2>Tópicos Populares</h2>
       <div class="cards">
+        
+      <a href="noticias.html" class="card-link">
         <div class="card">
           <h3>🤖 Inteligência Artificial</h3>
           <p>Descubra como a IA está mudando o mundo em áreas como saúde, transporte e comunicação.</p>
         </div>
+      </a>
+      <a href="noticias.html" class="card-link">
         <div class="card">
           <h3>⚙️ Robótica</h3>
           <p>Conheça as máquinas que estão facilitando nossa vida e automatizando tarefas do futuro.</p>
         </div>
+      </a>
+      <a href="noticias.html" class="card-link">
         <div class="card">
           <h3>📱 Gadgets</h3>
           <p>Veja as inovações mais recentes do mercado de dispositivos inteligentes e eletrônicos.</p>
         </div>
-      </div>
-    </section>
+      </a>
+      
+    </div>
+  </section>
   </main>
 
   <footer>
