@@ -211,6 +211,15 @@ article p {
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
 }
 
+/* ===== ESTILOS PARA IMAGENS DENTRO DOS CARDS ===== */
+.cards .card img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin-top: 15px;
+    margin-bottom: 10px;
+}
+
 /* ===== FORMULÁRIO DE CONTATO ===== */
 form {
     display: flex;
