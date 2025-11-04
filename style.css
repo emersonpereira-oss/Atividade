@@ -181,11 +181,32 @@ article p {
 }
 
 /* ===== TÓPICOS POPULARES ===== */
-.cards {
-    display: flex;
-    gap: 20px;
-    flex-wrap: wrap; 
-    justify-content: center;
+.card-link {
+    flex: 1 1 30%; 
+    min-width: 250px;
+}
+
+/* ===== MEDIA QUERY ===== */
+@media (max-width: 768px) {
+    
+    header {
+        padding: 15px 10px;
+    }
+    
+    header nav ul {
+        flex-direction: column;
+        padding-top: 10px;
+    }
+    
+    .card-link {
+        flex: 1 1 100%; 
+        min-width: unset; 
+    }
+    
+    .cards .card, article {
+        margin-left: 10px;
+        margin-right: 10px;
+    }
 }
 
 .card-link {
