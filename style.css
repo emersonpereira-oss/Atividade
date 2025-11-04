@@ -129,9 +129,14 @@ body.noticias-page {
 
 /* ===== CONTAINER PRINCIPAL ===== */
 main {
-    max-width: 900px;
+    /* Usando 100% para ocupar toda a largura e max-width para limitar em desktops */
+    width: 100%; 
+    max-width: 900px; /* Pode manter 900px ou 1000px */
     margin: 0 auto;
-    padding: 40px 20px 60px 20px;
+    /* Adiciona padding horizontal (20px de cada lado) para evitar que o conteúdo toque as bordas */
+    padding: 40px 20px 60px 20px; 
+    /* Adicione box-sizing para garantir que padding e border não adicionem largura extra */
+    box-sizing: border-box; 
 }
 
 /* ===== ARTIGOS DE NOTÍCIA ===== */
