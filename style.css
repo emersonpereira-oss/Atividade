@@ -152,6 +152,16 @@ article:hover {
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
 }
 
+/* ===== ESTILOS PARA IMAGENS DENTRO DOS ARTIGOS DE NOTÍCIA ===== */
+article img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 15px auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
 /* ===== TÍTULO DAS NOTÍCIAS ===== */
 article h3 {
     font-size: 1.4em;
